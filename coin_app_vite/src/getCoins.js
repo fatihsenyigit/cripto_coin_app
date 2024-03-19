@@ -1,4 +1,5 @@
 
+import displayCoinCard from "./displayCoins"
 
 export const getCoins = async(search) => {
     const API_KEY = 'coinrankinge9acd4b1ff110ab74dc6aec453d8e254903410999f5ebae4'
@@ -10,10 +11,18 @@ export const getCoins = async(search) => {
         }
     }
 
-    const res = await fetch(URL,options)
-    console.log(res)
+    try {
+        const res = await fetch(URL, options);
+        const data = await res.json();
+        if(!data.data.coins[0]) {
+            alert('coin can not be found')
+        } else {
+            displayCoinCard(data.data.coins[0]);
+        }
+    } catch (error) {
+        console.log(error)
+    }
+
 } 
 
 
-
-//  
