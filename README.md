@@ -1,4 +1,4 @@
-# Project-004 : Crypto-Coin-App (JS-04)
+# Project-004 : Crypto-Coin-App 
 
 ## Description
 Project aims to display current data of searched crypto coin around the world with fetching Crypto Coin Api data.
