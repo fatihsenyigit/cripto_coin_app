@@ -1,4 +1,5 @@
 import "./scss/style.scss"
+import { getCoins } from "./src/getCoins"
 
 // selectors
 const form = document.querySelector('header form')
@@ -14,5 +15,7 @@ const getCoinData = () => {
   const input = document.querySelector('header form input').value
   if(!input.trim()) {
     alert('input must be entered')
+  } else {
+    getCoins(input)
   }
 }
