@@ -25,7 +25,7 @@ const displayCoinCard = (coin) => {
     <div>RANK: ${rank}</div>
   </figure>
  `;
-    ul.append(coinLi);
+    ul.prepend(coinLi);
 
     //? Card içerisindeki sil butonu için event tanimlamasi
     coinLi.querySelector(".remove-icon").addEventListener("click", () => {
